@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Exercices ScrollTrigger</title>
+  </head>
+  <body>
+    <!-- MENU -->
+    <header class="masthead masthead-nav-enhanced">
+      <div class="compat-grid">
+        <div class="masthead-content">
+          <a href="/" id="mainNav-netlifyLogo" class="masthead-home"
+            ><svg
+              role="img"
+              aria-label="Netlify"
+              aria-hidden="true"
+              focusable="false"
+              class="icon-logo masthead-home-logo"
+            >
+              <use xlink:href="#logotype-v3"></use>
+            </svg>
+            <span class="visually-hidden">Home</span></a
+          >
+          <a href="#main" class="skip-to-content">Skip to content</a>
+          <div class="masthead-nav-compact-links">
+            <a
+              href="#search"
+              id="cta-mainNav-search-sm"
+              data-component-search-show=""
+              class="masthead-nav-link masthead-nav-link--search"
+              ><svg
+                width="22"
+                height="24"
+                viewBox="0 0 22 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                focusable="false"
+                class="icon-search"
+              >
+                <path
+                  d="M9.41345,0.47253 C14.4289798,0.47253 18.49487,4.53842023 18.49487,9.55395 C18.49487,12.0451846 17.4917537,14.3021289 15.8674001,15.9429038 L21.392653,21.4668327 L19.271347,23.5881673 L13.3990455,17.7163323 C12.1958116,18.3049607 10.8432164,18.63537 9.41345,18.63537 C4.39792023,18.63537 0.33203,14.5694798 0.33203,9.55395 C0.33203,4.53842023 4.39792023,0.47253 9.41345,0.47253 Z M9.41345,3.47253 C6.05477448,3.47253 3.33203,6.19527448 3.33203,9.55395 C3.33203,12.9126255 6.05477448,15.63537 9.41345,15.63537 C12.7721255,15.63537 15.49487,12.9126255 15.49487,9.55395 C15.49487,6.19527448 12.7721255,3.47253 9.41345,3.47253 Z"
+                ></path>
+              </svg>
+              <span class="visually-hidden">Search</span></a
+            >
+            <a
+              href="https://app.netlify.com/"
+              id="mainNav-login"
+              class="masthead-nav-link masthead-nav-link--login"
+              >Log in</a
+            >
+          </div>
+          <details
+            data-force-state=""
+            data-force-state-closed="(max-width: 63.1875em)"
+            data-details-anchor="body"
+            data-details-anchor-class="masthead-nav-menu-open"
+            data-details-modal="masthead-open-modal"
+            data-details-anchor-enhanced=".masthead"
+            data-details-anchor-class-enhanced="masthead-nav-enhanced"
+            data-details-anchor-scrollto="sticky-nav"
+            data-focus-trap=".masthead"
+            data-focus-trap-target="body"
+            data-focus-trap-class="masthead-has-focus"
+            open="open"
+            class="masthead-nav"
+          >
+            <!---->
+            <summary class="masthead-nav-menu is-stuck">
+              <span class="visually-hidden">Menu</span>
+              <svg
+                width="31"
+                height="25"
+                viewBox="0 0 31 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                tabindex="0"
+                class="icon-hamburger masthead-nav-menu-hamburger"
+              >
+                <rect
+                  x="0.581177"
+                  y="0.71875"
+                  width="30"
+                  height="4"
+                  fill="#333333"
+                ></rect>
+                <rect
+                  x="0.581177"
+                  y="10.7188"
+                  width="30"
+                  height="4"
+                  fill="#333333"
+                ></rect>
+                <rect
+                  x="0.581177"
+                  y="20.7188"
+                  width="30"
+                  height="4"
+                  fill="#333333"
+                ></rect>
+              </svg>
+            </summary>
+            <nav
+              aria-label="Main navigation"
+              class="masthead-nav-navigation masthead-initial-hide-small"
+            >
+              <ul class="masthead-nav-list">
+                <li class="masthead-nav-item masthead-nav-item--platform">
+                  <details
+                    data-details-animate=""
+                    data-details-animate-content=".dropdown-content"
+                    open="open"
+                    data-force-state=""
+                    class="dropdown masthead-nav-dropdown masthead-nav-dropdown--platform"
+                  >
+                    <summary
+                      class="dropdown-summary masthead-nav-dropdown-summary"
+                    >
+                      <div class="dropdown-hed masthead-nav-dropdown-hed">
+                        <span class="masthead-nav-link">Platform</span>
+                        <svg
+                          width="11"
+                          height="7"
+                          viewBox="0 0 11 7"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          aria-hidden="true"
+                          focusable="false"
+                          preserveAspectRatio="xMaxYMid meet"
+                          class="icon-dropdown-arrow dropdown-arrow"
+                        >
+                          <path
+                            d="M1.17163 1.45117L5.17163 5.45117L9.17163 1.45117"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </div>
+                    </summary>
+                    <div
+                      class="dropdown-content masthead-nav-dropdown-content masthead-nav-dropdown-content--platform masthead-nav-dropdown-content--no-padding dropdown-content-overlay"
+                    >
+                      <!---->
+                      <div class="masthead-meganav">
+                        <div class="masthead-meganav-columns">
+                          <div
+                            class="masthead-meganav-column masthead-meganav-column--platform"
+                          >
+                            <h3 class="masthead-meganav-subhed">
+                              The Netlify Platform
+                            </h3>
+                            <p class="masthead-meganav-p">
+                              <strong>Instantly build and deploy</strong>
+                              your sites to our global network from Git. Custom
+                              domains, https, deploy previews, rollbacks and
+                              much more.
+                            </p>
+                            <ul class="masthead-meganav-list">
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/products/"
+                                  id="nav-explore-how-it-works"
+                                  ><span>Explore the Platform</span>
+                                  <!----></a
+                                >
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/enterprise/"
+                                  id="nav-platform-enterprise-overview"
+                                  ><span>Enterprise Overview</span>
+                                  <!----></a
+                                >
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/pricing/"
+                                  id="nav-platform-plans-and-pricing"
+                                  ><span>Plans &amp; Pricing</span>
+                                  <!----></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="masthead-meganav-column">
+                            <h3 class="masthead-meganav-subhed">
+                              Key Features
+                            </h3>
+                            <ul
+                              class="masthead-meganav-list masthead-meganav-list--features"
+                            >
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/products/#netlify-edge-functions"
+                                  id="nav-features-edge-functions"
+                                >
+                                  Edge Functions
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/products/deploy-previews/"
+                                  id="nav-features-preview"
+                                >
+                                  Deploy Previews
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/products/forms/"
+                                  id="nav-features-forms"
+                                >
+                                  Forms
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="https://docs.netlify.com/visitor-access/identity/"
+                                  id="nav-features-identity"
+                                >
+                                  Identity
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a href="/security/" id="nav-features-security">
+                                  Security
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/products/analytics/"
+                                  id="nav-features-analytics"
+                                >
+                                  Analytics
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="https://docs.netlify.com/site-deploys/split-testing/"
+                                  id="nav-features-split-testing"
+                                >
+                                  Split Testing
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/products/build/plugins/"
+                                  id="nav-features-build-plugins"
+                                >
+                                  Build Plugins
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/integrations/"
+                                  id="nav-features-integrations"
+                                >
+                                  Integrations
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div
+                            class="masthead-meganav-column masthead-meganav-column--wide masthead-meganav-column--ecosystem"
+                          >
+                            <h3 class="masthead-meganav-subhed">Ecosystem</h3>
+                            <ul class="masthead-meganav-list">
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/partners/technology/"
+                                  id="nav-platform-technology-partners"
+                                >
+                                  Tech Partners
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/partners/agency/"
+                                  id="nav-platform-agency-partners"
+                                >
+                                  Agency Partners
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!---->
+                  </details>
+                </li>
+                <li class="masthead-nav-item masthead-nav-item--solutions">
+                  <details
+                    data-details-animate=""
+                    data-details-animate-content=".dropdown-content"
+                    open="open"
+                    data-force-state=""
+                    class="dropdown masthead-nav-dropdown masthead-nav-dropdown--solutions"
+                  >
+                    <summary
+                      class="dropdown-summary masthead-nav-dropdown-summary"
+                    >
+                      <div class="dropdown-hed masthead-nav-dropdown-hed">
+                        <span class="masthead-nav-link">Solutions</span>
+                        <svg
+                          width="11"
+                          height="7"
+                          viewBox="0 0 11 7"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          aria-hidden="true"
+                          focusable="false"
+                          preserveAspectRatio="xMaxYMid meet"
+                          class="icon-dropdown-arrow dropdown-arrow"
+                        >
+                          <path
+                            d="M1.17163 1.45117L5.17163 5.45117L9.17163 1.45117"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </div>
+                    </summary>
+                    <div
+                      class="dropdown-content masthead-nav-dropdown-content masthead-nav-dropdown-content--solutions masthead-nav-dropdown-content--no-padding dropdown-content-overlay"
+                    >
+                      <!---->
+                      <div class="masthead-meganav">
+                        <div
+                          class="masthead-meganav-columns masthead-meganav--solutions"
+                        >
+                          <div
+                            class="masthead-meganav-column masthead-meganav-column--why"
+                          >
+                            <h3 class="masthead-meganav-subhed">
+                              Why Netlify?
+                            </h3>
+                            <ul class="masthead-meganav-list">
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/customers/"
+                                  id="nav-solutions-what-others-have-built"
+                                  >Customers</a
+                                >
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/resources/case-studies/"
+                                  id="nav-solutions-case-studies"
+                                  >Case Studies</a
+                                >
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/roi-calculator/"
+                                  id="nav-solutions-roi-calculator"
+                                  >ROI Calculator</a
+                                >
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a href="/security/" id="nav-solutions-security"
+                                  >Security at Netlify</a
+                                >
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/whitepaper/"
+                                  id="nav-solutions-whitepaper"
+                                  >Whitepaper</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                          <div
+                            class="masthead-meganav-column masthead-meganav-column--cases"
+                          >
+                            <h3 class="masthead-meganav-subhed">Use Cases</h3>
+                            <ul class="masthead-meganav-list">
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/for/ecommerce/"
+                                  id="nav-solutions-ecommerce"
+                                  >E-commerce</a
+                                >
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/for/web-applications/"
+                                  id="nav-solutions-web-applications"
+                                  >Web Apps</a
+                                >
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/blog/2020/06/16/building-large-sites-on-netlify/"
+                                  id="nav-solutions-large-sites"
+                                  >Large Sites</a
+                                >
+                              </li>
+                            </ul>
+                            <p class="masthead-meganav-cta-copy">
+                              <small
+                                >Don’t see your solution? We can help.</small
+                              >
+                              <a
+                                href="/enterprise/contact/"
+                                id="nav-solutions-chat-with-netlify-expert"
+                                >Chat with a Netlify expert</a
+                              >
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!---->
+                  </details>
+                </li>
+                <li class="masthead-nav-item masthead-nav-item--integrations">
+                  <a
+                    href="/integrations/"
+                    id="mainNav-integrations"
+                    class="masthead-nav-link masthead-nav-link--integrations"
+                  >
+                    Integrations
+                    <svg
+                      width="12"
+                      height="10"
+                      viewBox="0 0 12 10"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      preserveAspectRatio="xMinYMin"
+                      aria-hidden="true"
+                      focusable="false"
+                      class="icon-arrow masthead-nav-link-arrow"
+                    >
+                      <use xlink:href="#icon-arrow"></use></svg
+                  ></a>
+                </li>
+                <li class="masthead-nav-item masthead-nav-item--start-building">
+                  <details
+                    data-details-animate=""
+                    data-details-animate-content=".dropdown-content"
+                    open="open"
+                    data-force-state=""
+                    class="dropdown masthead-nav-dropdown masthead-nav-dropdown--start-building"
+                  >
+                    <summary
+                      class="dropdown-summary masthead-nav-dropdown-summary"
+                    >
+                      <div class="dropdown-hed masthead-nav-dropdown-hed">
+                        <span class="masthead-nav-link">Start Building</span>
+                        <svg
+                          width="11"
+                          height="7"
+                          viewBox="0 0 11 7"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          aria-hidden="true"
+                          focusable="false"
+                          preserveAspectRatio="xMaxYMid meet"
+                          class="icon-dropdown-arrow dropdown-arrow"
+                        >
+                          <path
+                            d="M1.17163 1.45117L5.17163 5.45117L9.17163 1.45117"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </div>
+                    </summary>
+                    <div
+                      class="dropdown-content masthead-nav-dropdown-content masthead-nav-dropdown-content--start-building masthead-nav-dropdown-content--no-padding dropdown-content-overlay"
+                    >
+                      <!---->
+                      <div class="masthead-meganav">
+                        <div class="masthead-meganav-columns">
+                          <div
+                            class="masthead-meganav-column masthead-meganav-column--start"
+                          >
+                            <h3 class="masthead-meganav-subhed">
+                              Where to start
+                            </h3>
+                            <ul class="masthead-meganav-list">
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="https://docs.netlify.com/"
+                                  id="nav-start-building-docs"
+                                >
+                                  Docs
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/integrations/templates/"
+                                  id="nav-start-building-templates"
+                                >
+                                  Templates
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/resources/"
+                                  id="nav-start-building-resources"
+                                >
+                                  Tutorials &amp; Demos
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/experts-directory/"
+                                  id="nav-start-building-work-with-partner-agency"
+                                >
+                                  Work with a Partner Agency
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div
+                            class="masthead-meganav-column masthead-meganav-column--projects"
+                          >
+                            <h3 class="masthead-meganav-subhed">
+                              Project kickstarts
+                            </h3>
+                            <ul
+                              class="masthead-meganav-list masthead-meganav-list--multi-col"
+                            >
+                              <li class="masthead-meganav-listitem">
+                                <a href="/with/nextjs/" id="nav-tech-nextjs">
+                                  Next.js
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a href="/jamstack/" id="nav-tech-jamstack">
+                                  Jamstack
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a href="/with/react/" id="nav-tech-react">
+                                  React
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a href="/with/vue/" id="nav-tech-vue"> Vue </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a href="/with/svelte/" id="nav-tech-svelte">
+                                  Svelte
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a href="/with/gatsby/" id="nav-tech-gatsby">
+                                  Gatsby
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/with/wordpress/"
+                                  id="nav-tech-wordpress"
+                                >
+                                  WordPress
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a href="/with/nuxt/" id="nav-tech-nuxt">
+                                  Nuxt
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/with/sitecore/"
+                                  id="nav-tech-sitecore"
+                                >
+                                  Sitecore
+                                </a>
+                              </li>
+                              <li class="masthead-meganav-listitem">
+                                <a
+                                  href="/integrations/frameworks/"
+                                  id="nav-tech-more"
+                                >
+                                  + More
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!---->
+                  </details>
+                </li>
+                <li class="masthead-nav-item">
+                  <a
+                    href="https://docs.netlify.com"
+                    id="mainNav-docs"
+                    class="masthead-nav-link"
+                  >
+                    Docs
+                    <svg
+                      width="12"
+                      height="10"
+                      viewBox="0 0 12 10"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      preserveAspectRatio="xMinYMin"
+                      aria-hidden="true"
+                      focusable="false"
+                      class="icon-arrow masthead-nav-link-arrow"
+                    >
+                      <use xlink:href="#icon-arrow"></use></svg
+                  ></a>
+                </li>
+                <li class="masthead-nav-item">
+                  <a
+                    href="/pricing/"
+                    id="mainNav-pricing"
+                    class="masthead-nav-link"
+                  >
+                    Pricing
+                    <svg
+                      width="12"
+                      height="10"
+                      viewBox="0 0 12 10"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      preserveAspectRatio="xMinYMin"
+                      aria-hidden="true"
+                      focusable="false"
+                      class="icon-arrow masthead-nav-link-arrow"
+                    >
+                      <use xlink:href="#icon-arrow"></use></svg
+                  ></a>
+                </li>
+                <li
+                  aria-hidden="true"
+                  class="masthead-nav-item masthead-nav-item--spacer-a"
+                ></li>
+                <li
+                  class="masthead-nav-item masthead-nav-item--search masthead-nav-item--search-lg"
+                >
+                  <a
+                    href="#search"
+                    id="mainNav-search-lg"
+                    data-component-search-show=""
+                    class="masthead-nav-link masthead-nav-link--search"
+                    ><svg
+                      width="22"
+                      height="24"
+                      viewBox="0 0 22 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      focusable="false"
+                      class="icon-search"
+                    >
+                      <path
+                        d="M9.41345,0.47253 C14.4289798,0.47253 18.49487,4.53842023 18.49487,9.55395 C18.49487,12.0451846 17.4917537,14.3021289 15.8674001,15.9429038 L21.392653,21.4668327 L19.271347,23.5881673 L13.3990455,17.7163323 C12.1958116,18.3049607 10.8432164,18.63537 9.41345,18.63537 C4.39792023,18.63537 0.33203,14.5694798 0.33203,9.55395 C0.33203,4.53842023 4.39792023,0.47253 9.41345,0.47253 Z M9.41345,3.47253 C6.05477448,3.47253 3.33203,6.19527448 3.33203,9.55395 C3.33203,12.9126255 6.05477448,15.63537 9.41345,15.63537 C12.7721255,15.63537 15.49487,12.9126255 15.49487,9.55395 C15.49487,6.19527448 12.7721255,3.47253 9.41345,3.47253 Z"
+                      ></path>
+                    </svg>
+                    <span class="visually-hidden">Search</span></a
+                  >
+                </li>
+                <li class="masthead-nav-item masthead-nav-item--contact">
+                  <a
+                    href="/contact/"
+                    id="mainNav-contact"
+                    class="masthead-nav-link"
+                  >
+                    Contact
+                    <svg
+                      width="12"
+                      height="10"
+                      viewBox="0 0 12 10"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      preserveAspectRatio="xMinYMin"
+                      aria-hidden="true"
+                      focusable="false"
+                      class="icon-arrow masthead-nav-link-arrow"
+                    >
+                      <use xlink:href="#icon-arrow"></use></svg
+                  ></a>
+                </li>
+                <li class="masthead-nav-item masthead-nav-item--login-lg">
+                  <a
+                    href="https://app.netlify.com/"
+                    id="mainNav-login"
+                    class="masthead-nav-link"
+                    >Log in</a
+                  >
+                </li>
+                <li class="masthead-nav-item masthead-nav-item--signup">
+                  <a
+                    href="https://app.netlify.com/signup"
+                    type="button"
+                    id="mainNav-signup"
+                    class="masthead-nav-link--signup call-to-action call-to-action-button call-to-action-variant-blue"
+                    ><!---->
+                    <!---->
+                    <span>Sign up</span>
+                    <!----></a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </details>
+        </div>
+      </div>
+    </header>
+
+    <!-- <h1 class="title">ScrollTrigger de Eden Konde</h1> -->
+
+    <!-- CARD SCROLL TRIGGER -->
+    <section class="pancake home-features home-features-kanban section">
+      <div class="home-features-kanban-content">
+        <div class="home-features-kanban-sticky">
+          <div class="kanban-board" style="">
+            <div class="kanban-board-bg">
+              <svg
+                width="100%"
+                height="100%"
+                class="light-grid kanban-board-light-grid"
+              >
+                <mask
+                  maskUnits="userSpaceOnUse"
+                  id="fadeMaskGradient-kanban-board-light-grid"
+                >
+                  <linearGradient
+                    id="maskGradient-kanban-board-light-grid"
+                    x1="0"
+                    y1="0"
+                    x2="0"
+                    y2="100%"
+                  >
+                    <stop offset="0" style="stop-color: #000000"></stop>
+                    <stop offset="1" style="stop-color: #ffffff"></stop>
+                  </linearGradient>
+                  <rect
+                    fill="url(#maskGradient-kanban-board-light-grid)"
+                    width="100%"
+                    height="100%"
+                  ></rect>
+                </mask>
+                <pattern
+                  id="patternRectGrid-kanban-board-light-grid"
+                  x="0"
+                  y="0"
+                  width="35"
+                  height="35"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <rect
+                    data-light-grid-rect-id="kanban-board-light-grid"
+                    width="3"
+                    height="6"
+                    class="light-grid-rect"
+                    style="fill: #783afa"
+                  ></rect>
+                </pattern>
+                <rect
+                  x="0"
+                  y="0"
+                  width="100%"
+                  height="100%"
+                  fill="url(#patternRectGrid-kanban-board-light-grid)"
+                  mask="url(#fadeMaskGradient-kanban-board-light-grid)"
+                  style="mix-blend-mode: initial"
+                ></rect>
+              </svg>
+            </div>
+            <div
+              class="kanban-board-lane kanban-board-lane-team"
+              data-flip-id="auto-1"
+              style="translate: none; rotate: none; scale: none"
+            >
+              <svg viewBox="0 0 248 20" class="kanban-board-heading">
+                <text
+                  xml:space="preserve"
+                  font-family="Pacaembu, sans-serif"
+                  font-size="16.891"
+                  font-weight="600"
+                >
+                  <tspan x="0" y="15">Ton équipe demande</tspan>
+                </text>
+              </svg>
+              <ul class="kanban-board-tasks">
+                <li
+                  class="kanban-board-task kanban-board-category-3"
+                  data-flip-id="auto-9"
+                  style="translate: none; rotate: none; scale: none"
+                >
+                  <div class="kanban-board-content">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 248 76"
+                      class="kanban-board-task-svg"
+                    >
+                      <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#fff"
+                        d="M.625 9.625A8.812 8.812 0 0 1 9.438.812h229.515a8.813 8.813 0 0 1 8.813 8.813v57.188a8.813 8.813 0 0 1-8.813 8.812H9.437a8.813 8.813 0 0 1-8.812-8.813V9.626Z"
+                      ></path>
+                      <rect
+                        width="49.938"
+                        height="8.813"
+                        x="10.625"
+                        y="15.813"
+                        fill="currentColor"
+                        rx="4.406"
+                      ></rect>
+                      <text
+                        fill="#151A1E"
+                        font-family="Pacaembu, sans-serif"
+                        font-size="16.891"
+                        font-weight="300"
+                      >
+                        <tspan x="10.625" y="54.655">
+                          Push le code sur Git
+                        </tspan>
+                      </text>
+                    </svg>
+                    <div class="kanban-board-avatar">
+                      <picture
+                        ><source
+                          type="image/avif"
+                          srcset="
+                            https://d33wubrfki0l68.cloudfront.net/805176b780cf8a6f05b47bcf0c55f1d0411e3a19/8c459/v3/img/build/2-d7xkgelx-80.avif 80w
+                          " />
+                        <source
+                          type="image/webp"
+                          srcset="
+                            https://d33wubrfki0l68.cloudfront.net/e4379181c8ed3d1c9adb16a4a8720ddc565d0e94/7537a/v3/img/build/2-d7xkgelx-80.webp 80w
+                          " />
+                        <img
+                          alt=""
+                          loading="lazy"
+                          src="https://d33wubrfki0l68.cloudfront.net/1756b7f02e81f952db14f192c38b8252cb64e8a0/cf5de/v3/img/build/2-d7xkgelx-80.png"
+                          width="80"
+                          height="161"
+                      /></picture>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="kanban-board-lane kanban-board-lane-netlify"
+              data-flip-id="auto-10"
+              style="translate: none; rotate: none; scale: none"
+            >
+              <svg viewBox="0 0 248 20" class="kanban-board-heading">
+                <text
+                  xml:space="preserve"
+                  font-family="Pacaembu, sans-serif"
+                  font-size="16.891"
+                  font-weight="600"
+                >
+                  <tspan x="0" y="15">Les solutions Netlify</tspan>
+                </text>
+              </svg>
+              <ul class="kanban-board-tasks">
+                <li
+                  data-phil-noise="clonk,tonk"
+                  data-phil-noise-event="capture"
+                  class="kanban-board-task kanban-board-category-1"
+                  data-flip-id="auto-8"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    touch-action: none;
+                    cursor: grab;
+                    user-select: none;
+                  "
+                >
+                  <div
+                    class="kanban-board-content"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 0px);
+                      touch-action: none;
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 248 76"
+                      class="kanban-board-task-svg"
+                      style="touch-action: none"
+                    >
+                      <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#fff"
+                        d="M.625 9.625A8.812 8.812 0 0 1 9.438.812h229.515a8.813 8.813 0 0 1 8.813 8.813v57.188a8.813 8.813 0 0 1-8.813 8.812H9.437a8.813 8.813 0 0 1-8.812-8.813V9.626Z"
+                        style="touch-action: none"
+                      ></path>
+                      <rect
+                        width="49.938"
+                        height="8.813"
+                        x="10.625"
+                        y="15.813"
+                        fill="currentColor"
+                        rx="4.406"
+                        style="touch-action: none"
+                      ></rect>
+                      <text
+                        fill="#151A1E"
+                        font-family="Pacaembu, sans-serif"
+                        font-size="16.891"
+                        font-weight="300"
+                        style="touch-action: none"
+                      >
+                        <tspan x="10.625" y="54.655" style="touch-action: none">
+                          CI/CD
+                        </tspan>
+                      </text>
+                    </svg>
+                    <div class="kanban-board-avatar" style="touch-action: none">
+                      <picture style="touch-action: none"
+                        ><source
+                          type="image/avif"
+                          srcset="
+                            https://d33wubrfki0l68.cloudfront.net/49f9c8eb3ca1a365fbe473f5127f73771e414c00/45593/v3/img/build/dy6nhhclo4-80.avif 80w
+                          "
+                          style="touch-action: none" />
+                        <source
+                          type="image/webp"
+                          srcset="
+                            https://d33wubrfki0l68.cloudfront.net/9cdc6c601ee0507bf56cdd72e9acff5de6b86dbc/acf21/v3/img/build/dy6nhhclo4-80.webp 80w
+                          "
+                          style="touch-action: none" />
+                        <img
+                          alt=""
+                          loading="lazy"
+                          src="https://d33wubrfki0l68.cloudfront.net/ff803f0ad0d0d553101a12ea784b32294426be99/06bc7/v3/img/build/dy6nhhclo4-80.png"
+                          width="80"
+                          height="161"
+                          style="touch-action: none"
+                      /></picture>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  data-phil-noise="clonk,tonk"
+                  data-phil-noise-event="capture"
+                  class="kanban-board-task kanban-board-category-2"
+                  data-flip-id="auto-7"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    touch-action: none;
+                    cursor: grab;
+                    user-select: none;
+                  "
+                >
+                  <div
+                    class="kanban-board-content"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 0px);
+                      touch-action: none;
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 248 76"
+                      class="kanban-board-task-svg"
+                      style="touch-action: none"
+                    >
+                      <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#fff"
+                        d="M.625 9.625A8.812 8.812 0 0 1 9.438.812h229.515a8.813 8.813 0 0 1 8.813 8.813v57.188a8.813 8.813 0 0 1-8.813 8.812H9.437a8.813 8.813 0 0 1-8.812-8.813V9.626Z"
+                        style="touch-action: none"
+                      ></path>
+                      <rect
+                        width="49.938"
+                        height="8.813"
+                        x="10.625"
+                        y="15.813"
+                        fill="currentColor"
+                        rx="4.406"
+                        style="touch-action: none"
+                      ></rect>
+                      <text
+                        fill="#151A1E"
+                        font-family="Pacaembu, sans-serif"
+                        font-size="16.891"
+                        font-weight="300"
+                        style="touch-action: none"
+                      >
+                        <tspan x="10.625" y="54.655" style="touch-action: none">
+                          Production servers
+                        </tspan>
+                      </text>
+                    </svg>
+                    <div class="kanban-board-avatar" style="touch-action: none">
+                      <picture style="touch-action: none"
+                        ><source
+                          type="image/avif"
+                          srcset="
+                            https://d33wubrfki0l68.cloudfront.net/1a5efb7c2661611e3083ac19c8af6a4e3935e775/48869/v3/img/build/wyetqty_vv-80.avif 80w
+                          "
+                          style="touch-action: none" />
+                        <source
+                          type="image/webp"
+                          srcset="
+                            https://d33wubrfki0l68.cloudfront.net/551ca0eef84d329265522944fe675011e9f73b3d/481a9/v3/img/build/wyetqty_vv-80.webp 80w
+                          "
+                          style="touch-action: none" />
+                        <img
+                          alt=""
+                          loading="lazy"
+                          src="https://d33wubrfki0l68.cloudfront.net/c69fb15575dae9a4289cbd824a0a292834f5f174/33de8/v3/img/build/wyetqty_vv-80.png"
+                          width="80"
+                          height="156"
+                          style="touch-action: none"
+                      /></picture>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  data-phil-noise="clonk,tonk"
+                  data-phil-noise-event="capture"
+                  class="kanban-board-task kanban-board-category-3"
+                  data-flip-id="auto-6"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    touch-action: none;
+                    cursor: grab;
+                    user-select: none;
+                  "
+                >
+                  <div
+                    class="kanban-board-content"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 0px);
+                      touch-action: none;
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 248 76"
+                      class="kanban-board-task-svg"
+                      style="touch-action: none"
+                    >
+                      <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#fff"
+                        d="M.625 9.625A8.812 8.812 0 0 1 9.438.812h229.515a8.813 8.813 0 0 1 8.813 8.813v57.188a8.813 8.813 0 0 1-8.813 8.812H9.437a8.813 8.813 0 0 1-8.812-8.813V9.626Z"
+                        style="touch-action: none"
+                      ></path>
+                      <rect
+                        width="49.938"
+                        height="8.813"
+                        x="10.625"
+                        y="15.813"
+                        fill="currentColor"
+                        rx="4.406"
+                        style="touch-action: none"
+                      ></rect>
+                      <text
+                        fill="#151A1E"
+                        font-family="Pacaembu, sans-serif"
+                        font-size="16.891"
+                        font-weight="300"
+                        style="touch-action: none"
+                      >
+                        <tspan x="10.625" y="54.655" style="touch-action: none">
+                          Backups/rollbacks
+                        </tspan>
+                      </text>
+                    </svg>
+                    <div class="kanban-board-avatar" style="touch-action: none">
+                      <picture style="touch-action: none"
+                        ><source
+                          type="image/avif"
+                          srcset="
+                            https://d33wubrfki0l68.cloudfront.net/cf3d99ce40794c64b8e9c446234cff480a5b8ac7/e0fae/v3/img/build/tw47pa49ig-80.avif 80w
+                          "
+                          style="touch-action: none" />
+                        <source
+                          type="image/webp"
+                          srcset="
+                            https://d33wubrfki0l68.cloudfront.net/17f05f0f712370664af10c1fb7805c50e48dfa5c/122b9/v3/img/build/tw47pa49ig-80.webp 80w
+                          "
+                          style="touch-action: none" />
+                        <img
+                          alt=""
+                          loading="lazy"
+                          src="https://d33wubrfki0l68.cloudfront.net/4d7682ad7cd0ac0a04b7f7458c64ae5172b7019e/3d4f9/v3/img/build/tw47pa49ig-80.png"
+                          width="80"
+                          height="160"
+                          style="touch-action: none"
+                      /></picture>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  data-phil-noise="clonk,tonk"
+                  data-phil-noise-event="capture"
+                  class="kanban-board-task kanban-board-category-1"
+                  data-flip-id="auto-5"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    touch-action: none;
+                    cursor: grab;
+                    user-select: none;
+                  "
+                >
+                  <div
+                    class="kanban-board-content"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 0px);
+                      touch-action: none;
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 248 76"
+                      class="kanban-board-task-svg"
+                      style="touch-action: none"
+                    >
+                      <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#fff"
+                        d="M.625 9.625A8.812 8.812 0 0 1 9.438.812h229.515a8.813 8.813 0 0 1 8.813 8.813v57.188a8.813 8.813 0 0 1-8.813 8.812H9.437a8.813 8.813 0 0 1-8.812-8.813V9.626Z"
+                        style="touch-action: none"
+                      ></path>
+                      <rect
+                        width="49.938"
+                        height="8.813"
+                        x="10.625"
+                        y="15.813"
+                        fill="currentColor"
+                        rx="4.406"
+                        style="touch-action: none"
+                      ></rect>
+                      <text
+                        fill="#151A1E"
+                        font-family="Pacaembu, sans-serif"
+                        font-size="16.891"
+                        font-weight="300"
+                        style="touch-action: none"
+                      >
+                        <tspan x="10.625" y="54.655" style="touch-action: none">
+                          Global CDN
+                        </tspan>
+                      </text>
+                    </svg>
+                    <div class="kanban-board-avatar" style="touch-action: none">
+                      <picture style="touch-action: none"
+                        ><source
+                          type="image/avif"
+                          srcset="
+                            https://d33wubrfki0l68.cloudfront.net/61cce4fbd7720f25d7bca03a1cb953241917626f/e96aa/v3/img/build/qfki-zyt3w-80.avif 80w
+                          "
+                          style="touch-action: none" />
+                        <source
+                          type="image/webp"
+                          srcset="
+                            https://d33wubrfki0l68.cloudfront.net/80fe318ea0599183f3d5cdef836f908502a69727/f6211/v3/img/build/qfki-zyt3w-80.webp 80w
+                          "
+                          style="touch-action: none" />
+                        <img
+                          alt=""
+                          loading="lazy"
+                          src="https://d33wubrfki0l68.cloudfront.net/e23d4623d67ff25e732445feccb76a2c47931412/a70c0/v3/img/build/qfki-zyt3w-80.png"
+                          width="80"
+                          height="169"
+                          style="touch-action: none"
+                      /></picture>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  data-phil-noise="clonk,tonk"
+                  data-phil-noise-event="capture"
+                  class="kanban-board-task kanban-board-category-2"
+                  data-flip-id="auto-4"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    touch-action: none;
+                    cursor: grab;
+                    user-select: none;
+                  "
+                >
+                  <div
+                    class="kanban-board-content"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 0px);
+                      touch-action: none;
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 248 76"
+                      class="kanban-board-task-svg"
+                      style="touch-action: none"
+                    >
+                      <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#fff"
+                        d="M.625 9.625A8.812 8.812 0 0 1 9.438.812h229.515a8.813 8.813 0 0 1 8.813 8.813v57.188a8.813 8.813 0 0 1-8.813 8.812H9.437a8.813 8.813 0 0 1-8.812-8.813V9.626Z"
+                        style="touch-action: none"
+                      ></path>
+                      <rect
+                        width="49.938"
+                        height="8.813"
+                        x="10.625"
+                        y="15.813"
+                        fill="currentColor"
+                        rx="4.406"
+                        style="touch-action: none"
+                      ></rect>
+                      <text
+                        fill="#151A1E"
+                        font-family="Pacaembu, sans-serif"
+                        font-size="16.891"
+                        font-weight="300"
+                        style="touch-action: none"
+                      >
+                        <tspan x="10.625" y="54.655" style="touch-action: none">
+                          Staging environment
+                        </tspan>
+                      </text>
+                    </svg>
+                    <div class="kanban-board-avatar" style="touch-action: none">
+                      <picture style="touch-action: none"
+                        ><source
+                          type="image/avif"
+                          srcset="
+                            https://d33wubrfki0l68.cloudfront.net/49f9c8eb3ca1a365fbe473f5127f73771e414c00/45593/v3/img/build/dy6nhhclo4-80.avif 80w
+                          "
+                          style="touch-action: none" />
+                        <source
+                          type="image/webp"
+                          srcset="
+                            https://d33wubrfki0l68.cloudfront.net/9cdc6c601ee0507bf56cdd72e9acff5de6b86dbc/acf21/v3/img/build/dy6nhhclo4-80.webp 80w
+                          "
+                          style="touch-action: none" />
+                        <img
+                          alt=""
+                          loading="lazy"
+                          src="https://d33wubrfki0l68.cloudfront.net/ff803f0ad0d0d553101a12ea784b32294426be99/06bc7/v3/img/build/dy6nhhclo4-80.png"
+                          width="80"
+                          height="161"
+                          style="touch-action: none"
+                      /></picture>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  data-phil-noise="clonk,tonk"
+                  data-phil-noise-event="capture"
+                  class="kanban-board-task kanban-board-category-1"
+                  data-flip-id="auto-3"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    touch-action: none;
+                    cursor: grab;
+                    user-select: none;
+                  "
+                >
+                  <div
+                    class="kanban-board-content"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 0px);
+                      touch-action: none;
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 248 76"
+                      class="kanban-board-task-svg"
+                      style="touch-action: none"
+                    >
+                      <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#fff"
+                        d="M.625 9.625A8.812 8.812 0 0 1 9.438.812h229.515a8.813 8.813 0 0 1 8.813 8.813v57.188a8.813 8.813 0 0 1-8.813 8.812H9.437a8.813 8.813 0 0 1-8.812-8.813V9.626Z"
+                        style="touch-action: none"
+                      ></path>
+                      <rect
+                        width="49.938"
+                        height="8.813"
+                        x="10.625"
+                        y="15.813"
+                        fill="currentColor"
+                        rx="4.406"
+                        style="touch-action: none"
+                      ></rect>
+                      <text
+                        fill="#151A1E"
+                        font-family="Pacaembu, sans-serif"
+                        font-size="16.891"
+                        font-weight="300"
+                        style="touch-action: none"
+                      >
+                        <tspan x="10.625" y="54.655" style="touch-action: none">
+                          Devops
+                        </tspan>
+                      </text>
+                    </svg>
+                    <div class="kanban-board-avatar" style="touch-action: none">
+                      <picture style="touch-action: none"
+                        ><source
+                          type="image/avif"
+                          srcset="
+                            https://d33wubrfki0l68.cloudfront.net/d397b432e5ff014eb7b8787a507300dcbaf37955/f3f46/v3/img/build/a93znui_ot-80.avif 80w
+                          "
+                          style="touch-action: none" />
+                        <source
+                          type="image/webp"
+                          srcset="
+                            https://d33wubrfki0l68.cloudfront.net/1902cf2d480852711873bddda8779f9467d410ce/3aded/v3/img/build/a93znui_ot-80.webp 80w
+                          "
+                          style="touch-action: none" />
+                        <img
+                          alt=""
+                          loading="lazy"
+                          src="https://d33wubrfki0l68.cloudfront.net/4af9e593bdd23ec57f3a7f0b54ad8ce6e94df5a5/f4193/v3/img/build/a93znui_ot-80.png"
+                          width="80"
+                          height="161"
+                          style="touch-action: none"
+                      /></picture>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  data-phil-noise="clonk,tonk"
+                  data-phil-noise-event="capture"
+                  class="kanban-board-task kanban-board-category-3"
+                  data-flip-id="auto-2"
+                  style="
+                    translate: none;
+                    rotate: none;
+                    scale: none;
+                    touch-action: none;
+                    cursor: grab;
+                    user-select: none;
+                  "
+                >
+                  <div
+                    class="kanban-board-content"
+                    style="
+                      translate: none;
+                      rotate: none;
+                      scale: none;
+                      transform: translate(0px, 0px);
+                      touch-action: none;
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 248 76"
+                      class="kanban-board-task-svg"
+                      style="touch-action: none"
+                    >
+                      <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#fff"
+                        d="M.625 9.625A8.812 8.812 0 0 1 9.438.812h229.515a8.813 8.813 0 0 1 8.813 8.813v57.188a8.813 8.813 0 0 1-8.813 8.812H9.437a8.813 8.813 0 0 1-8.812-8.813V9.626Z"
+                        style="touch-action: none"
+                      ></path>
+                      <rect
+                        width="49.938"
+                        height="8.813"
+                        x="10.625"
+                        y="15.813"
+                        fill="currentColor"
+                        rx="4.406"
+                        style="touch-action: none"
+                      ></rect>
+                      <text
+                        fill="#151A1E"
+                        font-family="Pacaembu, sans-serif"
+                        font-size="16.891"
+                        font-weight="300"
+                        style="touch-action: none"
+                      >
+                        <tspan x="10.625" y="54.655" style="touch-action: none">
+                          Scaling
+                        </tspan>
+                      </text>
+                    </svg>
+                    <div class="kanban-board-avatar" style="touch-action: none">
+                      <picture style="touch-action: none"
+                        ><source
+                          type="image/avif"
+                          srcset="
+                            https://d33wubrfki0l68.cloudfront.net/e0dc47d2781fd0199c4a404e7e10363cae8ca15b/2fb2a/v3/img/build/kil2dczevt-80.avif 80w
+                          "
+                          style="touch-action: none" />
+                        <source
+                          type="image/webp"
+                          srcset="
+                            https://d33wubrfki0l68.cloudfront.net/cd80326a99d2252a1f303a52f86b999f5e6e8360/8109f/v3/img/build/kil2dczevt-80.webp 80w
+                          "
+                          style="touch-action: none" />
+                        <img
+                          alt=""
+                          loading="lazy"
+                          src="https://d33wubrfki0l68.cloudfront.net/52180790aa3001f883b30fe1c8a18866ef4d2871/98bd5/v3/img/build/kil2dczevt-80.png"
+                          width="80"
+                          height="156"
+                          style="touch-action: none"
+                      /></picture>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!---->
+            <!---->
+            <!---->
+            <!---->
+            <!---->
+          </div>
+        </div>
+
+        <!-- TEXT ET GRID -->
+        <div class="home-features-wrapper home-features-kanban-story-item">
+          <h2 class="heading type-a type-a-4">C'est presque prêt, presque</h2>
+          <p class="type-a type-a-1">
+            <b>Reproduire le ScrollTrigger de Netlify</b>
+            GSAP est une libraire permettant d'animer tout ce que JavaScript est en mesure de manipuler. Elle permet de changer la valeur de certaines propriétés plusieurs fois par secondes, ce qui permet de simuler le mouvement et bien d'autres effets.
+          </p>
+          <p>
+            <a
+              href="#"
+              type="button"
+              id="cta-all-ready-start-building"
+              class="call-to-action call-to-action-button call-to-action-variant-blue"
+              ><!---->
+              <!---->
+              <span>Scroller pour le résultat</span>
+              <!----></a
+            >
+          </p>
+        </div>
+
+        <div class="home-features-wrapper home-features-kanban-story-item">
+          <div class="home-testimonial">
+            <p class="home-testimonial-quote type-a type-a-1">
+              ScrollTrigger est un plugiciel (plugin) développé par GreenSock permettant de déclencher ou synchroniser une animation avec le défilement de la page.
+            </p>
+            <div class="testimonial-avatar">
+              <picture class="avatar-image" style="background: #ffdd73"
+                ><source
+                  type="image/webp"
+                  srcset="
+                    https://d33wubrfki0l68.cloudfront.net/8b3298b5b8821f22012f84aaef462bc548a945dc/71487/v3/img/build/yvpkplc8cr-80.webp 80w
+                  " />
+                <img
+                  alt="Profile picture of Justin Watts"
+                  loading="lazy"
+                  src="https://d33wubrfki0l68.cloudfront.net/20e871197ee0c633b2d9ebb454d66037551fa57b/8a3f6/v3/img/build/yvpkplc8cr-80.jpeg"
+                  width="80"
+                  height="80"
+              /></picture>
+              <div class="avatar-name-link">
+                <p class="paragraph avatar-name type-b type-b-0">
+                  Justin Watts
+                </p>
+                <p class="paragraph avatar-description type-b type-b-0">
+                  Head of Engineering, TunnelBear
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br>
+
+    <!-- SECTION DU BAS -->
+    <section class="pancake home-starter-templates home-features">
+      <h2 class="heading heading type-a type-a-4">Essayer quelque chose de différent</h2>
+      <p class="copy type-a type-a-1">
+        Get started quickly with one of these templates. Click to connect your
+        Git provider. Netlify will clone the repository and deploy your new site
+        automatically.
+      </p>
+      <div
+        aria-label="Launch something amazing"
+        class="inline-scrollbox u-scroll-x scrollbox"
+        tabindex="0"
+        id="inline-scrollbox-0"
+        aria-describedby="inline-scrollbox-0-description"
+      >
+        <ul class="inline-scrollbox-wrapper">
+          <li class="home-starter-templates-item" style="">
+            <picture class="home-starter-templates-bg-img"
+              ><source
+                type="image/webp"
+                srcset="
+                  https://d33wubrfki0l68.cloudfront.net/abbc784f131c22b993078393781af0fe68b8818b/24c26/v3/img/build/mm3tr-_l-_-1000.webp 1000w
+                " />
+              <img
+                alt=""
+                loading="lazy"
+                src="https://d33wubrfki0l68.cloudfront.net/fefe9c2d79e8c9ddafaec1b85fd3fc78bdde1879/f5774/v3/img/build/mm3tr-_l-_-1000.jpeg"
+                width="1000"
+                height="611"
+            /></picture>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              preserveAspectRatio="xMinYMin"
+              aria-hidden="true"
+              focusable="false"
+              class="icon-external-link home-starter-templates-icon"
+            >
+              <use xlink:href="#icon-external-link"></use>
+            </svg>
+            <a
+              id="template-web-app"
+              href="./blog/deploy-your-remix-supabase-app-today!/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="home-starter-templates-link type-a type-a-2"
+              tabindex="-1"
+            >
+              Build a web app
+            </a>
+            <ul class="home-starter-templates-tags">
+              <li class="home-starter-templates-tag">Supabase</li>
+              <li class="home-starter-templates-tag">Remix</li>
+            </ul>
+          </li>
+          <li class="home-starter-templates-item" style="">
+            <picture class="home-starter-templates-bg-img"
+              ><source
+                type="image/webp"
+                srcset="
+                  https://d33wubrfki0l68.cloudfront.net/6c4b33bfbf7fb8c9cc31922d59e1543198f6bb39/aea22/v3/img/build/ti5febsrml-1000.webp 1000w
+                " />
+              <img
+                alt=""
+                loading="lazy"
+                src="https://d33wubrfki0l68.cloudfront.net/25978cb0c3342aeedf67712e55516a3f16e8d45b/0d8c2/v3/img/build/ti5febsrml-1000.jpeg"
+                width="1000"
+                height="611"
+            /></picture>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              preserveAspectRatio="xMinYMin"
+              aria-hidden="true"
+              focusable="false"
+              class="icon-external-link home-starter-templates-icon"
+            >
+              <use xlink:href="#icon-external-link"></use>
+            </svg>
+            <a
+              id="template-ecommerce"
+              href="./blog/2021/07/21/building-a-headless-shopify-e-commerce-site-with-nuxt-and-the-storefront-api-part-1/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="home-starter-templates-link type-a type-a-2"
+              tabindex="-1"
+            >
+              Build a global commerce site
+            </a>
+            <ul class="home-starter-templates-tags">
+              <li class="home-starter-templates-tag">Nuxt</li>
+              <li class="home-starter-templates-tag">Shopify</li>
+            </ul>
+          </li>
+          <li class="home-starter-templates-item" style="">
+            <picture class="home-starter-templates-bg-img"
+              ><source
+                type="image/webp"
+                srcset="
+                  https://d33wubrfki0l68.cloudfront.net/775cf075521b0ccb72223720fd7fb435432ad0fb/8dac8/v3/img/build/hjskjsmgod-1000.webp 1000w
+                " />
+              <img
+                alt=""
+                loading="lazy"
+                src="https://d33wubrfki0l68.cloudfront.net/7df5b5103122466368812335c020649266213ab6/71aad/v3/img/build/hjskjsmgod-1000.jpeg"
+                width="1000"
+                height="611"
+            /></picture>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              preserveAspectRatio="xMinYMin"
+              aria-hidden="true"
+              focusable="false"
+              class="icon-external-link home-starter-templates-icon"
+            >
+              <use xlink:href="#icon-external-link"></use>
+            </svg>
+            <a
+              id="template-content"
+              href="./blog/2020/08/17/integrate-next.js-and-contentful/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="home-starter-templates-link type-a type-a-2"
+              tabindex="-1"
+            >
+              Build a content site
+            </a>
+            <ul class="home-starter-templates-tags">
+              <li class="home-starter-templates-tag">Next.js</li>
+              <li class="home-starter-templates-tag">Contentful</li>
+            </ul>
+          </li>
+          <li class="home-starter-templates-item" style="">
+            <picture class="home-starter-templates-bg-img"
+              ><source
+                type="image/webp"
+                srcset="
+                  https://d33wubrfki0l68.cloudfront.net/5947b5b6414e23d923bf4a2116834f4c60367fcb/ddfb9/v3/img/build/chyicqlygw-1000.webp 1000w
+                " />
+              <img
+                alt=""
+                loading="lazy"
+                src="https://d33wubrfki0l68.cloudfront.net/43d84d448cc9f2e88247b273fcf4d5bb08d0bf6e/3d610/v3/img/build/chyicqlygw-1000.jpeg"
+                width="1000"
+                height="611"
+            /></picture>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              preserveAspectRatio="xMinYMin"
+              aria-hidden="true"
+              focusable="false"
+              class="icon-external-link home-starter-templates-icon"
+            >
+              <use xlink:href="#icon-external-link"></use>
+            </svg>
+            <a
+              id="template-dev-blog"
+              href="https://app.netlify.com/start/deploy?repository=https://github.com/TryGhost/eleventy-starter-ghost"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="home-starter-templates-link type-a type-a-2"
+              tabindex="-1"
+            >
+              Build a dev blog
+            </a>
+            <ul class="home-starter-templates-tags">
+              <li class="home-starter-templates-tag">Ghost</li>
+              <li class="home-starter-templates-tag">11ty</li>
+            </ul>
+          </li>
+          <li class="home-starter-templates-item" style="">
+            <picture class="home-starter-templates-bg-img"
+              ><source
+                type="image/webp"
+                srcset="
+                  https://d33wubrfki0l68.cloudfront.net/ded94b6ffffae5513fd996ab96ffe1b6734a172a/237bb/v3/img/build/iidvhy1ozw-1000.webp 1000w
+                " />
+              <img
+                alt=""
+                loading="lazy"
+                src="https://d33wubrfki0l68.cloudfront.net/1c3c0e66fea85bb71499fa68449d192b9a2d23c3/5a2e9/v3/img/build/iidvhy1ozw-1000.jpeg"
+                width="1000"
+                height="611"
+            /></picture>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              preserveAspectRatio="xMinYMin"
+              aria-hidden="true"
+              focusable="false"
+              class="icon-external-link home-starter-templates-icon"
+            >
+              <use xlink:href="#icon-external-link"></use>
+            </svg>
+            <a
+              id="template-docs"
+              href="https://app.netlify.com/start/deploy?repository=https://github.com/DemoMacro/vuepress-boilerplate-netlify-cms"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="home-starter-templates-link type-a type-a-2"
+              tabindex="-1"
+            >
+              Build a docs site
+            </a>
+            <ul class="home-starter-templates-tags">
+              <li class="home-starter-templates-tag">VuePress</li>
+              <li class="home-starter-templates-tag">Netlify CMS</li>
+            </ul>
+          </li>
+          <li class="home-starter-templates-item" style="">
+            <picture class="home-starter-templates-bg-img"
+              ><source
+                type="image/webp"
+                srcset="
+                  https://d33wubrfki0l68.cloudfront.net/b76705d03612a62f115a9696e2e6b050443e9ac0/1397f/v3/img/build/kdobdjwp4y-1000.webp 1000w
+                " />
+              <img
+                alt=""
+                loading="lazy"
+                src="https://d33wubrfki0l68.cloudfront.net/72f7a0633262e3005101d80796141336356b9341/efa7a/v3/img/build/kdobdjwp4y-1000.jpeg"
+                width="1000"
+                height="611"
+            /></picture>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              preserveAspectRatio="xMinYMin"
+              aria-hidden="true"
+              focusable="false"
+              class="icon-external-link home-starter-templates-icon"
+            >
+              <use xlink:href="#icon-external-link"></use>
+            </svg>
+            <a
+              id="template-lp"
+              href="https://app.netlify.com/start/deploy?repository=https://github.com/feld/11ty-landing-page"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="home-starter-templates-link type-a type-a-2"
+              tabindex="-1"
+            >
+              Build a landing page
+            </a>
+            <ul class="home-starter-templates-tags">
+              <li class="home-starter-templates-tag">11ty</li>
+            </ul>
+          </li>
+        </ul>
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+      </div>
+      <p
+        id="inline-scrollbox-0-description"
+        class="inline-scrollbox__description"
+      >
+        Navigate with left and right arrow keys
+      </p>
+    </section>
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
